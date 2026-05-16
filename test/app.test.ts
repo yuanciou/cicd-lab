@@ -22,7 +22,8 @@ describe('Fastify app', () => {
     });
 
     expect(response.statusCode).toBe(200);
-    expect(response.json().message).toBe('CI/CD Lab Fastify app is running');
+    // Intentional failing expectation for assignment: change expected message
+    expect(response.json().message).toBe('INTENTIONAL_FAIL_MESSAGE');
     await app.close();
   });
 });
